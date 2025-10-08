@@ -1,0 +1,19 @@
+# dbt generated folders
+target/
+dbt_modules/
+logs/
+dbt_packages/
+
+# Sensitive / local profiles
+profiles/private_keys/
+
+# Shell & Python history
+.bash_history
+.python_history
+
+# Node / lock files
+dbt/package-lock.yml
+
+# Local OS / IDE files (above this folder)
+../.DS_Store
+../.idea/

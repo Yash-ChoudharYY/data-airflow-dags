@@ -1,0 +1,31 @@
+# dbt_project.yml
+
+name: data_airflow_dags
+version: "1.0.0"
+config-version: 2
+
+profile: my_project
+
+# Where your models live
+model-paths: ["models"]
+
+# Where dbt will store compiled SQL and run artifacts
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  data_airflow_dags:                # 👈 matches your project name
+    data_team:                      # 👈 folder under /models
+      call_centres:                 # 👈 subfolder under /models/data_team
+        +materialized: table        # all models here → tables
+        +tags: ["hourly"]
+        +persist_docs:
+          relation: true
+          columns: true
+
+      customers:                    # 👈 subfolder under /models/data_team
+        +materialized: view         # all models here → views
+        +tags: ["daily"]
+        +persist_docs:
+          relation: true
+          columns: true
