@@ -24,8 +24,8 @@ models:
           columns: true
 
       customers:                    # 👈 subfolder under /models/data_team
-        +materialized: view         # all models here → views
-        +tags: ["daily"]
+        +materialized: table         # all models here → views
+        +tags: ["hourly"]
         +persist_docs:
           relation: true
           columns: true
