@@ -1,0 +1,21 @@
+selectors:
+  - name: hourly
+    definition:
+      union:
+        - method: tag
+          value: "hourly"
+  - name: every_two_hours
+    definition:
+      union:
+        - method: tag
+          value: "every_two_hours"
+  - name: weekly
+    definition:
+      union:
+        - method: tag
+          value: "weekly"
+  - name: monthly
+    definition:
+      union:
+        - method: tag
+          value: "monthly"
