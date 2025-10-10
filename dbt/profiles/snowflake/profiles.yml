@@ -1,0 +1,26 @@
+my_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: paeorho-pq17869
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      database: "{{ env_var('SNOWFLAKE_DEV_DATABASE', 'DEVELOPMENT') }}"
+      warehouse: COMPUTE_WH
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA', 'YCHOUDHARY') }}"
+      threads: 4
+      client_session_keep_alive: False
+
+    prod:
+      type: snowflake
+      account: paeorho-pq17869
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      database: PC_DBT_DB
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
+      threads: 4
+      client_session_keep_alive: False
