@@ -1,3 +1,0 @@
-[0m13:08:49  Encountered an error:
-Runtime Error
-  Could not find selector named every_two_hours, expected one of []
