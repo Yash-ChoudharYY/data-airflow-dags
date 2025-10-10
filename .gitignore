@@ -17,3 +17,6 @@ dbt/package-lock.yml
 # Local OS / IDE files (above this folder)
 ../.DS_Store
 ../.idea/
+
+# DBT auto generate user profile
+*.user.yml
