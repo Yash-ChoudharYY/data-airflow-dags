@@ -20,3 +20,4 @@ dbt/package-lock.yml
 
 # DBT auto generate user profile
 *.user.yml
+.idea/
